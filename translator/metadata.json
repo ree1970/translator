@@ -1,0 +1,5 @@
+{
+  "name": "AI Translator EN-JP",
+  "description": "A sleek and modern web application that translates text from English to Japanese using the power of the Gemini API.",
+  "requestFramePermissions": []
+}
