@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting...</title>
+  <script>
+    // プロジェクト名 ('translator'の部分) を取得
+    const pathSegments = window.location.pathname.split('/');
+    const repoName = pathSegments[1]; // 例: 'translator'
+
+    // URLのパス部分からリポジトリ名を除去し、ハッシュとして設定してindex.htmlへリダイレクト
+    // 例: /translator/about -> /translator/#/about
+    // 404ページからindex.htmlにリダイレクトさせることで、
+    // SPAのルーターがURLのハッシュを読み取り、適切なコンポーネントを表示します。
+    window.location.replace(`/${repoName}/#${window.location.pathname.substring(repoName.length + 1) || ''}${window.location.search}`);
+  </script>
+</head>
+<body>
+  <p>ページが見つかりません。リダイレクトしています...</p>
+  <a href="./index.html">ホームへ戻る</a>
+</body>
+</html>pussyucd
